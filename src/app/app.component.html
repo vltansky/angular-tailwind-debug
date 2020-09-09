@@ -1,0 +1,7 @@
+<div class="flex flex-1 flex-col">
+  <router-outlet
+    #outlet="outlet"
+    (activate)="setOutletState(outlet)"
+    (deactivate)="setOutletState(outlet)"
+  ></router-outlet>
+</div>

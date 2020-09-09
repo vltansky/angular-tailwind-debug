@@ -1,0 +1,20 @@
+# Compiled output
+dist
+
+# Lock Files
+package-lock.json
+
+# IDEs and editors
+.idea
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Image Files
+src/**/*.png
+src/**/*.svg
+src/**/*.ico
+
+# Font Files
+src/**/*.woff2

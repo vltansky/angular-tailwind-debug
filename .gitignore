@@ -1,0 +1,15 @@
+# Compiled output
+dist
+
+# Dependencies
+node_modules
+
+# Lock Files
+package-lock.json
+
+# IDEs and editors
+.idea
+
+# System Files
+.DS_Store
+Thumbs.db

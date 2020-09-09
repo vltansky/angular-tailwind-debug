@@ -1,0 +1,195 @@
+{
+  "$schema": "/node_modules/@angular/cli/lib/config/schema.json",
+  "defaultProject": "ga-portal-client",
+  "newProjectRoot": "projects",
+  "projects": {
+    "ga-portal-client": {
+      "architect": {
+        "build": {
+          "builder": "@angular-builders/custom-webpack:browser",
+          "configurations": {
+            "development": {
+              "aot": true,
+              "budgets": [
+                {
+                  "maximumError": "8mb",
+                  "maximumWarning": "8mb",
+                  "type": "initial"
+                },
+                {
+                  "maximumError": "10kb",
+                  "maximumWarning": "6kb",
+                  "type": "anyComponentStyle"
+                }
+              ],
+              "buildOptimizer": true,
+              "extractCss": true,
+              "extractLicenses": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ],
+              "namedChunks": false,
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "vendorChunk": false
+            },
+            "production": {
+              "aot": true,
+              "budgets": [
+                {
+                  "maximumError": "8mb",
+                  "maximumWarning": "8mb",
+                  "type": "initial"
+                },
+                {
+                  "maximumError": "10kb",
+                  "maximumWarning": "6kb",
+                  "type": "anyComponentStyle"
+                }
+              ],
+              "buildOptimizer": true,
+              "extractCss": true,
+              "extractLicenses": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.production.ts"
+                }
+              ],
+              "namedChunks": false,
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "vendorChunk": false
+            },
+            "staging": {
+              "aot": true,
+              "budgets": [
+                {
+                  "maximumError": "8mb",
+                  "maximumWarning": "8mb",
+                  "type": "initial"
+                },
+                {
+                  "maximumError": "10kb",
+                  "maximumWarning": "6kb",
+                  "type": "anyComponentStyle"
+                }
+              ],
+              "buildOptimizer": true,
+              "extractCss": true,
+              "extractLicenses": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.staging.ts"
+                }
+              ],
+              "namedChunks": false,
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "vendorChunk": false
+            },
+            "testing": {
+              "aot": true,
+              "budgets": [
+                {
+                  "maximumError": "8mb",
+                  "maximumWarning": "8mb",
+                  "type": "initial"
+                },
+                {
+                  "maximumError": "10kb",
+                  "maximumWarning": "6kb",
+                  "type": "anyComponentStyle"
+                }
+              ],
+              "buildOptimizer": true,
+              "extractCss": true,
+              "extractLicenses": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.testing.ts"
+                }
+              ],
+              "namedChunks": false,
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "vendorChunk": false
+            }
+          },
+          "options": {
+            "aot": true,
+            "allowedCommonJsDependencies": [
+              "tailwindcss/resolveConfig",
+              "hammerjs"
+            ],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets/i18n/",
+              "src/assets/images/",
+              "src/assets/documents/"
+            ],
+            "customWebpackConfig": {
+              "path": "./webpack.config.js"
+            },
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "outputPath": "dist",
+            "polyfills": "src/polyfills.ts",
+            "styles": ["src/assets/scss/styles.scss"],
+            "tsConfig": "tsconfig.app.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "exclude": ["**/node_modules/**"],
+            "tsConfig": ["tsconfig.app.json"]
+          }
+        },
+        "serve": {
+          "builder": "@angular-builders/custom-webpack:dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "ga-portal-client:build:development"
+            },
+            "production": {
+              "browserTarget": "ga-portal-client:build:production"
+            },
+            "staging": {
+              "browserTarget": "ga-portal-client:build:staging"
+            },
+            "testing": {
+              "browserTarget": "ga-portal-client:build:testing"
+            }
+          },
+          "options": {
+            "aot": true,
+            "browserTarget": "ga-portal-client:build",
+            "customWebpackConfig": {
+              "path": "./webpack.config.js"
+            }
+          }
+        }
+      },
+      "prefix": "ga",
+      "projectType": "application",
+      "root": "",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "sourceRoot": "src"
+    }
+  },
+  "version": 1
+}
