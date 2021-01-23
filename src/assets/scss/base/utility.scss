@@ -1,0 +1,11 @@
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.leaf {
+  @apply rounded-2xl rounded-tr-none;
+}
+
+.overlay {
+  @apply bg-white opacity-75;
+}
