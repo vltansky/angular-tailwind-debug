@@ -1,7 +1,10 @@
 module.exports = {
+  prefix: '',
+  darkMode: false, // or 'media' or 'class'
   purge: {
-    enabled: true,
-    content: ['./src/**/*.html', './src/**/*.ts'],
+    content: [
+      './src/**/*.{html,ts}',
+    ],
     options: {
       whitelist: [
         'text-ga-success',
