@@ -173,10 +173,7 @@
           },
           "options": {
             "aot": true,
-            "browserTarget": "ga-portal-client:build",
-            "customWebpackConfig": {
-              "path": "./webpack.config.js"
-            }
+            "browserTarget": "ga-portal-client:build"
           }
         }
       },
