@@ -138,7 +138,7 @@
               "src/assets/documents/"
             ],
             "customWebpackConfig": {
-              "path": "./webpack.config.js"
+              "path": "webpack.config.js"
             },
             "index": "src/index.html",
             "main": "src/main.ts",
